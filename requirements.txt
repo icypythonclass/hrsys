@@ -1,0 +1,4 @@
+Django==1.11.13
+mysqlclient==1.3.12
+django-material==1.2.5
+django-viewflow==1.2.5
