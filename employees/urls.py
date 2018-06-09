@@ -5,6 +5,6 @@ from . import views
 
 
 urlpatterns = [
-    # url('^$', generic.RedirectView.as_view(url='./mymodel/'), name="index"),
-    # url('^mymodel/', include(views.MyModelViewSet().urls)),
+    url('^$', generic.RedirectView.as_view(url='./employee/'), name="index"),
+    url('^employee/', include(views.EmployeeViewSet().urls)),
 ]
