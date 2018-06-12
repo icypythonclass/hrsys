@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.views import generic
+
 from material.frontend import urls as frontend_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include(frontend_urls)),
-    url('^$', generic.RedirectView.as_view(url='/employees/')),
+    url('^$', generic.RedirectView.as_view(url='/employees/'),),
 ]
