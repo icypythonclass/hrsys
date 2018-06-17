@@ -20,3 +20,5 @@ class Employee(models.Model):
 
     def __str__(self):
         return "{} {}".format(self.last_name, self.first_name)
+
+
