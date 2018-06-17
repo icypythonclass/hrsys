@@ -7,4 +7,5 @@ from . import views
 urlpatterns = [
     url('^$', generic.RedirectView.as_view(url='./employee/'), name="index"),
     url('^employee/', include(views.EmployeeViewSet().urls)),
+    url('^attendance/', include(views.AttendanceViewSet().urls)),
 ]
