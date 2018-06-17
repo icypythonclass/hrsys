@@ -34,4 +34,4 @@ class Attendance(models.Model):
         db_table = 'yo_attendances'
 
     def __str__(self):
-        return "{} {}".format(self.last_name, self.first_name)
+        return "{} {}".format(self.employee, self.start_time.date())
