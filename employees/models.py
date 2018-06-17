@@ -22,3 +22,16 @@ class Employee(models.Model):
         return "{} {}".format(self.last_name, self.first_name)
 
 
+class Attendance(models.Model):
+    employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    start_time = models.DateTimeField(verbose_name='出勤时间')
+    end_time = models.DateTimeField(verbose_name='退勤时间')
+    rest_time = models.SmallIntegerField(verbose_name='休息时间')
+
+    class Meta:
+        verbose_name = '考勤'
+        verbose_name_plural = '考勤'
+        db_table = 'yo_attendances'
+
+    def __str__(self):
+        return "{} {}".format(self.employee, self.start_time.date())
