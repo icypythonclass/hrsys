@@ -14,7 +14,7 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Remote Python 3.6.5 Docker (majiusi/hrsys:0.1)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Remote Python 3.6.5 Docker (runningsb/hrsyssalary:0.1)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">

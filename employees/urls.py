@@ -8,4 +8,5 @@ urlpatterns = [
     url('^$', generic.RedirectView.as_view(url='./employee/'), name="index"),
     url('^employee/', include(views.EmployeeViewSet().urls)),
     url('^attendance/', include(views.AttendanceViewSet().urls)),
+    url('^salary/', include(views.SalaryViewSet().urls)),
 ]

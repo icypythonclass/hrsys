@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'hrsys',
         'USER': 'root',
-        'PASSWORD': 'admin888',
+        'PASSWORD': 'my-secret-pw',
         'HOST': 'db',
         'PORT': '3306',
     }
