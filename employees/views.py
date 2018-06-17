@@ -8,3 +8,6 @@ class EmployeeViewSet(ModelViewSet):
 
 class AttendanceViewSet(ModelViewSet):
     model = models.Attendance
+
+class CareerViewSet(ModelViewSet):
+   model = models.CareerHistory
