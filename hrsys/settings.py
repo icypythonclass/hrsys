@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'employees.apps.EmployeesConfig',
     'CareerHistory.apps.CareerHistoryConfig',
+    'cases.apps.CasesConfig',
 ]
 
 MIDDLEWARE = [
