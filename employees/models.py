@@ -37,6 +37,18 @@ class Attendance(models.Model):
         return "{} {}".format(self.employee, self.start_time.date())
 
 
+class Technology(models.Model):
+    employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    technology_name = models.CharField(verbose_name='技術', max_length=20, null=True, blank=True)
+
+    class Meta:
+        verbose_name = '技術'
+        verbose_name_plural = '技術'
+        db_table = 'yo_technology'
+
+    def __str__(self):
+        return "{}技術".format(self.employee)
+
 
 class CareerHistory(models.Model):
     employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
