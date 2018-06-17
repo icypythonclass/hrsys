@@ -4,7 +4,7 @@ from . import models
 
 
 class EmployeeViewSet(ModelViewSet):
-    model = models.Employee
+     model = models.Employee
 
 
 
