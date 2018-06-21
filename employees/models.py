@@ -65,4 +65,4 @@ class CareerHistory(models.Model):
         db_table = 'yo_career_history'
 
     def __str__(self):
-        return "{} ~ {}, {}".format(self.start_date, self.end_date, self.company)
+        return "{},   {} ~ {}".format(self.employee, self.start_date, self.end_date,)
