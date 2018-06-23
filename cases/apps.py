@@ -4,4 +4,5 @@ from material.frontend.apps import ModuleMixin
 
 class CasesConfig(ModuleMixin, AppConfig):
     name = 'cases'
-    icon = '<i class="material-icons">settings_applications</i>'
+    verbose_name = '案件'
+    icon = '<i class="material-icons">assignment</i>'
