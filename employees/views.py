@@ -1,5 +1,9 @@
 from material.frontend.views import ModelViewSet, CreateModelView, UpdateModelView, DetailModelView
 from material import Layout, Row
+
+from django.views.generic import CreateView
+from material.frontend.views import ModelViewSet
+
 from . import models
 
 
@@ -47,6 +51,7 @@ class CareerUpdateView(UpdateModelView):
 class EmployeeViewSet(ModelViewSet):
     model = models.Employee
     create_view_class = EmployeeCreateView
+
 
 
 class AttendanceViewSet(ModelViewSet):

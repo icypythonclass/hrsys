@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 
 class Case(models.Model):
     BELONG_CHOICES = (
@@ -14,7 +12,7 @@ class Case(models.Model):
     case_start_time = models.DateField(verbose_name='案件開始時間')
     case_end_time = models.DateField(verbose_name='案件終了時間')
     case_belongings = models.CharField(verbose_name='案件所属', max_length=1, default='U', choices=BELONG_CHOICES)
-    case_industry = models.CharField(verbose_name='作業場所', max_length=20, null=True, blank=True)
+    case_industry = models.CharField(verbose_name='案件産業', max_length=20, null=True, blank=True)
     case_language = models.CharField(verbose_name='言語', max_length=20, null=True, blank=True)
     case_price = models.CharField(verbose_name='単価', max_length=10)
     case_remark = models.CharField(verbose_name='備考', max_length=100, null=True, blank=True)
@@ -24,4 +22,6 @@ class Case(models.Model):
         verbose_name_plural = '案件'
         db_table = 'yo_cases'
 
+    def __str__(self):
+        return "{}".format(self.case_name)
 

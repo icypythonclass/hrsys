@@ -65,4 +65,19 @@ class CareerHistory(models.Model):
         db_table = 'yo_career_history'
 
     def __str__(self):
-        return "{},   {} ~ {}".format(self.employee, self.start_date, self.end_date,)
+        return "{} ~ {}, {}".format(self.start_date, self.end_date, self.company)
+
+class Salary(models.Model):
+    employee_id = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    salary = models.BigIntegerField(verbose_name='工资', null=True, blank=True)
+    present_flg = models.CharField(verbose_name='现在适用', max_length=1, default='0')
+    start_date = models.DateField(verbose_name='适用开始日', null=True, blank=True)
+    end_date = models.DateField(verbose_name='适用终了日', null=True, blank=True)
+
+    class Meta:
+        verbose_name = '社員工资'
+        verbose_name_plural = '社員工资'
+        db_table = 'yo_employee_salary'
+
+    def __str__(self):
+        return "{} 工资".format(self.employee)
