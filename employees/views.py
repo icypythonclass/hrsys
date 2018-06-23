@@ -21,8 +21,19 @@ class EmployeeViewSet(ModelViewSet):
     create_view_class = EmployeeCreateView
 
 
+class AttendanceCreateView(CreateModelView):
+    layout = Layout(
+        Row('employee'),
+        Row('start_time', 'end_time', 'rest_time',),
+    )
+
+    def has_add_permission(self, request):
+        return True
+
+
 class AttendanceViewSet(ModelViewSet):
     model = models.Attendance
+    create_view_class = AttendanceCreateView
 
 
 class TechnologyViewSet(ModelViewSet):
