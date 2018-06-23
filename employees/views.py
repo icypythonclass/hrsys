@@ -69,6 +69,10 @@ class AttendanceViewSet(ModelViewSet):
     create_view_class = AttendanceCreateView
 
 
+class SalaryViewSet(ModelViewSet):
+    model = models.Salary
+
+
 class TechnologyViewSet(ModelViewSet):
     model = models.Technology
 

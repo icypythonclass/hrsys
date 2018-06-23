@@ -10,5 +10,5 @@ urlpatterns = [
     url('^attendance/', include(views.AttendanceViewSet().urls)),
     url('^technology/', include(views.TechnologyViewSet().urls)),
     url('^career/', include(views.CareerViewSet().urls)),
-]    url('^salary/', include(views.SalaryViewSet().urls)),
+    url('^salary/', include(views.SalaryViewSet().urls)),
 ]
