@@ -81,4 +81,3 @@ class Salary(models.Model):
 
     def __str__(self):
         return "{} 工资".format(self.employee)
-
